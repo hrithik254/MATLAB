@@ -1,7 +1,7 @@
 im1 = imread("horses_grayscale.png");
 
 % Create a tiled layout for 2 rows 3 columns
-tiledlayout("flow"); % 1 row, 2 columns
+tiledlayout("flow");
 
 % First subplot with the 'hot' colormap
 ax1 = nexttile;
