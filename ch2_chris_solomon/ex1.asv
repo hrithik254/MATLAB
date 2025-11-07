@@ -1,0 +1,13 @@
+A = imread("parrot_gray.png");
+[r, c] = size(A);
+% Initialize a matrix to store the processed image
+processedImage = zeros(r, c);
+
+sub = rand(r.*c,1) < 0.01;
+
+% "For every pixel location where sub has a 1 (is TRUE), copy the original 
+% pixel value from image A into the new blank image Abuild. Leave all the 
+% other pixels in Abuild as zero."
+processedImage(sub) = A(sub);
+
+h = fspecial("gaussian",[10,10],2);
