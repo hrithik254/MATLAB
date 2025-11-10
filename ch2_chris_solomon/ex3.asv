@@ -1,0 +1,22 @@
+peppers = imread('peppers.png');
+parrot = imread('parrot_gray.png');
+[indx_img1,cmap1] = rgb2ind(peppers,Q);
+[indx_img2, cmap2] = gray2ind(parrot,Q);
+
+A = imapprox(indx_img1);
+B = imapprox(indx_img2);
+
+tiledlayout;
+nexttile;
+imshow(A);
+title('Approximation of Indexed Peppers Image');
+nexttile;
+imshow(B);
+title('Approximation of Indexed Parrot Image');
+% Display the original images for comparison
+nexttile;
+imshow(peppers);
+title('Original Peppers Image');
+nexttile;
+imshow(parrot);
+title('Original Parrot Image');

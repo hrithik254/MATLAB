@@ -1,0 +1,20 @@
+img_football = imread('football.jpg');
+img_text = imread('text.png');
+
+A = imresize(img_football,0.9);
+B = imresize(img_text,0.);
+
+tiledlayout(2,2);
+
+nexttile;
+imshow(img_football);
+title("football_original");
+nexttile;
+imshow(A);
+title('Resized Football Image');
+nexttile;
+imshow(img_text);
+title('Original Text Image');
+nexttile;
+imshow(B);
+title('Resized Text Image');

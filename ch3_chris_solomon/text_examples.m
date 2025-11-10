@@ -1,0 +1,70 @@
+ % A=imread('cameraman.tif'); %Readinimage
+ % subplot(1,2,1), imshow(A); %Displayimage
+ % B=imcomplement(A); %Inverttheimage
+ % subplot(1,2,2), imshow(B); %Displayresult imageB
+
+
+ % example 3.6
+
+
+ % A=imread('car_1.jpg'); %Readin1st image
+ % B=imread('car_2.jpg'); %Readin2ndimage
+ % Abw=im2bw(A); %converttobinary
+ % Bbw=im2bw(B); %converttobinary
+ % subplot(1,3,1), imshow(Abw); %Display1st image
+ % subplot(1,3,2), imshow(Bbw); %Display2ndimage
+ % Output=xor(Abw,Bbw); %xorimagesimages
+ % subplot(1,3,3), imshow(Output); %Displayresul
+
+ %  ex 3.7
+
+ % 
+ % I=imread('cameraman.tif');
+ % T=im2bw(I, 0.5);
+ % subplot(1,3,1), imshow(I);
+ 
+
+% ex 3.8
+ % I=imread('cameraman.tif');
+ % subplot(2,2,1), imshow(I);
+ % Id=im2double(I);
+ % Output1=2*log(1+Id);
+ % Output2=3*log(1+Id);
+ % Output3=5*log(1+Id);
+ % subplot(2,2,2), imshow(Output1);
+ % subplot(2,2,3), imshow(Output2);
+ % subplot(2,2,4), imshow(Output3);
+
+
+% ex3.12
+ % 
+ % I=imread('coins.png');
+ % subplot(1,2,1), imshow(I);
+ % subplot(1,2,2), imhist(I);
+
+
+ % ex 3.14
+
+ % I=imread('coins.png');
+ % level=graythresh(I);
+ % It=im2bw(I, level);
+ % subplot(1,2,1), imshow(I);
+ % subplot(1,2,2), imshow(It);
+
+ % 3.19
+ % I=imread('pout.tif');
+ % Ieq=histeq(I);
+ % subplot(2,2,1), imshow(I);
+ % subplot(2,2,2), imshow(Ieq);
+ % subplot(2,2,3), imhist(I);
+ % subplot(2,2,4), imhist(Ieq);
+
+ %3.22
+
+% I=imread('autumn.tif');
+%  Ihsv=rgb2hsv(I);
+%  V=histeq(Ihsv(:,:,3));
+%  Ihsv(:,:,3)=V;
+%  Iout=hsv2rgb(Ihsv);
+%  subplot(1,2,1), imshow(I);
+%  subplot(1,2,2), imshow(Iout);
